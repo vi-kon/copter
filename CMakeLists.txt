@@ -57,4 +57,4 @@ add_custom_target(
 # To enable code auto-completion, please specify path
 # to main source file (*.c, *.cpp) and uncomment line below
 #
-add_executable(multiwii src/main.cpp src/i2c.cpp src/i2c.h src/sensor/barometer.cpp src/sensor/barometer.h)
+add_executable(multiwii src/main.cpp src/i2c.cpp src/i2c.h src/sensor/barometer.cpp src/sensor/barometer.h src/main.h src/utils.cpp src/utils.h)

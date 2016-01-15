@@ -4,24 +4,19 @@
 
 #define BMP085
 
+uint32_t currentTime;
+
 void setup() {
     Serial1.begin(115200);
 
     Serial1.println("Setup");
 
-    i2c_init();
-
-    bmp085_read_calibration();
-
     uint8_t c = 5;
-
     while (c) {
         c--;
         i2c_init();
-        delay(10);
-        bmp085_read_calibration();
-        delay(5);
-        if (i2c_errors_count != 0) {
+        bmp085_init();
+        if (i2c_errors_count == 0) {
             Serial1.println("Success");
             break;
         }
@@ -29,17 +24,11 @@ void setup() {
 }
 
 void loop() {
-    delay(1000);
+    currentTime = micros();
 
-    Serial1.println("Loop");
-
-    bmp085_read_ut();
-//    delay(10);
-//    bmp085_read_up();
-//    delay(10);
-//    bmp085_calculate();
-//    delay(10);
-//    Serial1.println(baroTemperature);
-//    Serial1.println(baroPressure);
-
+    if (bmp085_update() == 2) {
+        Serial1.println("loop");
+        Serial1.println(baroTemperature);
+        Serial1.println(baroPressure);
+    }
 }

@@ -1,0 +1,44 @@
+#ifndef MULTIWII_BMA180_H
+#define MULTIWII_BMA180_H
+
+#include "../config.h"
+
+#ifdef BMA180
+
+#define BMA180_ADDRESS 0x40
+
+// Registers
+#define BMA180_ACC_X_LSB 0x02
+#define BMA180_CTRLREG0 0x0D
+#define BMA180_BW_TCS 0x20
+#define BMA180_TCO_Z 0x30
+#define BMA180_OFFSET_LSB1 0x35
+
+// Low pass filters
+#define BMA180_FILTER_LOW_10HZ 0x00
+#define BMA180_FILTER_LOW_20HZ 0x01
+#define BMA180_FILTER_LOW_40HZ 0x02
+#define BMA180_FILTER_LOW_75HZ 0x03
+#define BMA180_FILTER_LOW_150HZ 0x04
+#define BMA180_FILTER_LOW_300HZ 0x05
+#define BMA180_FILTER_LOW_600HZ 0x06
+#define BMA180_FILTER_LOW_1200HZ 0x07
+
+// Ranges
+#define BMA180_RANGE_1G 0x00
+#define BMA180_RANGE_15G 0x01
+#define BMA180_RANGE_2G 0x02
+#define BMA180_RANGE_3G 0x03
+#define BMA180_RANGE_4G 0x04
+#define BMA180_RANGE_8G 0x05
+#define BMA180_RANGE_16G 0x06
+
+#define BMA180_EE_W 4
+
+void bma180_init();
+
+void bma180_update();
+
+#endif
+
+#endif //MULTIWII_BMA180_H

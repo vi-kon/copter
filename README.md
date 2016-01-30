@@ -51,7 +51,7 @@ void loop() {
 
 # Sensor datasheets
 
-* **BMA180** - [docs/sensor/BMA180-DataSheet-v2.5.pdf]
-* **BMP085** - [docs/sensor/BST-BMP085-DS000-05.pdf]
-* **HMC5883** - [docs/sensor/HMC5883.pdf]
-* **ITG3200** - [docs/sensor/PS-ITG-3200-00-01.4.pdf]
+* **BMA180** - [BMA180-DataSheet-v2.5.pdf](docs/sensor/BMA180-DataSheet-v2.5.pdf)
+* **BMP085** - [BST-BMP085-DS000-05.pdf](docs/sensor/BST-BMP085-DS000-05.pdf)
+* **HMC5883** - [HMC5883.pdf](docs/sensor/HMC5883.pdf)
+* **ITG3200** - [PS-ITG-3200-00-01.4.pdf](docs/sensor/PS-ITG-3200-00-01.4.pdf)

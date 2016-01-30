@@ -1,6 +1,6 @@
 # Fly controller for Arduino platform
 
-**Note**: The package is still in development
+**Note**: The package is still under development
 
 ## Currently status
 
@@ -48,3 +48,10 @@ void loop() {
     delay(500);
 }
 ```
+
+# Sensor datasheets
+
+* **BMA180** - [docs/sensor/BMA180-DataSheet-v2.5.pdf]
+* **BMP085** - [docs/sensor/BST-BMP085-DS000-05.pdf]
+* **HMC5883** - [docs/sensor/HMC5883.pdf]
+* **ITG3200** - [docs/sensor/PS-ITG-3200-00-01.4.pdf]

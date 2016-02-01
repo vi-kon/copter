@@ -4,6 +4,7 @@
 
 ## Currently status
 
+* Implemented **Serial** protocol
 * Added **BMA180** (accelerometer), **BMP085** (barometer), **HMC5883** (magnetometer) and **ITG3200** (gyroscope) sensors 
 * Implemented **I2C** bus
 

@@ -1,5 +1,4 @@
 #include <stdint.h>
-#include <HardwareSerial.h>
 #include "sensors.h"
 #include "../i2c.h"
 #include "imu.h"
@@ -16,7 +15,6 @@ void sensors_init() {
         gyro_init();
         mag_init();
         if (i2c_errors_count == 0) {
-            Serial1.println("Success");
             break;
         }
     }

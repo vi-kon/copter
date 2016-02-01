@@ -1,5 +1,4 @@
 #include <avr/io.h>
-#include <HardwareSerial.h>
 #include "i2c.h"
 
 uint32_t i2c_errors_count;
@@ -24,8 +23,6 @@ void __attribute__ ((noinline)) i2c_transmission(uint8_t twcr) {
             // Force reset TWINT register
             TWCR = 0;
             i2c_errors_count++;
-
-            Serial1.println("Error");
 
             break;
         }
